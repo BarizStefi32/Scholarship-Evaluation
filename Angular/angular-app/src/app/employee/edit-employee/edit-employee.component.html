@@ -1,0 +1,46 @@
+<div class="container" *ngIf="employeeIdExists">
+    <h1>Edit an employee</h1>
+    <form [formGroup]="form" class="edit-employee-form">
+
+        <label class="label-style" for="inputFirstName">First Name</label>
+        <mat-form-field>
+            <input matInput name="inputFirstName" formControlName="firstName">
+        </mat-form-field>
+
+        <label class="label-style" for="inputLastName">Last Name</label>
+        <mat-form-field>
+            <input matInput name="inputLastName" formControlName="lastName">
+        </mat-form-field>
+
+        <label class="label-style" for="inputEmail">Email</label>
+        <mat-form-field>
+            <input matInput name="inputEmail" formControlName="email">
+        </mat-form-field>
+
+        <label class="label-style" for="inputGender">Gender</label>
+        <mat-radio-group aria-label="Select an option" name="inputGender" formControlName="gender">
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+        </mat-radio-group>
+
+        <label class="label-style" for="inputCity">City</label>
+        <mat-form-field>
+            <input matInput name="inputCity" formControlName="city">
+        </mat-form-field>
+
+        <label class="label-style" for="inputPhoneNumber">Phone Number</label>
+        <mat-form-field>
+            <input matInput name="inputPhoneNumber" formControlName="phoneNumber">
+        </mat-form-field>
+
+        <label class="label-style" for="inputRole">Role</label>
+        <mat-form-field>
+            <input matInput name="inputRole" formControlName="role">
+        </mat-form-field>
+
+        <!-- <p class="error" *ngIf="showNameError">The name must have at least three characters</p> -->
+
+        <button type="submit" mat-button [disabled]="form.invalid" (click)="editEmployee()">Edit</button>
+
+    </form>
+</div>

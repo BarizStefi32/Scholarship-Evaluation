@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>final-app</name>
+    </assembly>
+    <members>
+        <member name="M:final_app.Controllers.EmployeeController.GetAllEmployees">
+            <summary>
+                Return all the employees
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:final_app.Controllers.EmployeeController.AddEmployee(final_app.Models.Employee)">
+            <summary>
+              Add a new employee to the list
+            </summary>
+            <param name="employeeToAdd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:final_app.Controllers.EmployeeController.DeleteEmployee(System.Guid)">
+            <summary>
+                Delete a specified employee
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:final_app.Controllers.EmployeeController.UpdateEmployee(System.Guid,final_app.Models.Employee)">
+            <summary>
+                Update a specified employee
+            </summary>
+            <param name="id"></param>
+            <param name="employeeToUpdate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:final_app.Controllers.EmployeeController.Get(System.Guid)">
+            <summary>
+                Return a note find by a specified id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

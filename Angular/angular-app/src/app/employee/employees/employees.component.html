@@ -1,0 +1,48 @@
+<h1>List of employees</h1>
+
+<div class="sort-container">
+    <div class="sort-div">
+        <button mat-raised-button color="primary" (click)="sortAscending()" [disabled]=" activeButton==='ascending'">Ascending</button>
+        <button mat-raised-button color="primary" (click)=" sortDescending()" [disabled]="activeButton==='descending'">Descending</button>
+    </div>
+</div>
+
+
+<div class="employee-container">
+
+
+    <div class="employee-div " *ngFor="let employee of employees ">
+        <mat-card class="employee-card ">
+            <mat-card-header class="card-header">
+                <p>{{employee.firstName}} {{employee.lastName}}</p>
+            </mat-card-header>
+
+            <mat-card-content>
+                <p>{{employee.email}}</p>
+                <p>{{employee.gender}}</p>
+                <p>{{employee.city}}</p>
+                <p>{{employee.phoneNumber}}</p>
+                <p>{{employee.role}}</p>
+            </mat-card-content>
+
+            <mat-card-footer class="buttons-container ">
+
+                <div class="delete-btn ">
+
+                    <button mat-icon-button aria-label="Example icon button with a edit icon " (click)="editEmployee(employee.id) ">
+            <mat-icon>edit</mat-icon>
+          </button>
+
+                    <button mat-icon-button aria-label="Example icon button with a delete icon " (click)="deleteEmployee(employee.id) ">
+            <mat-icon>delete</mat-icon>
+          </button>
+                </div>
+
+            </mat-card-footer>
+
+        </mat-card>
+    </div>
+    <app-addbutton></app-addbutton>
+</div>
+
+<app-edit-employee [employeeId]="employeeId " (userEdited)="getEmployees() "></app-edit-employee>

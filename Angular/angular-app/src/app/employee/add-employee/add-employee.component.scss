@@ -1,0 +1,23 @@
+.mat-radio-button~.mat-radio-button {
+    margin-left: 16px;
+}
+
+.add-employee-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.error {
+    color: red;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
